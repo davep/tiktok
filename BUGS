@@ -1,0 +1,8 @@
+o Now and again the active timers in TikTok appear to "stop". I've
+  found that coming out of and going back into TikTok will start
+  them up again (no time is lost). It looks like the Pilot OS has
+  stopped sending nilEvent events to the application for some reason.
+
+o Sometimes, when using the menu shortcuts, the interface can get into
+  a bit of a mess (this is really only a problem for the timer that is
+  at the bottom).

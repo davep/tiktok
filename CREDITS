@@ -1,0 +1,43 @@
+Thanks go to the following people who have mailed bug reports and
+suggestions or have submitted code during the development of TikTok:
+
+o Andrew Robertson <Andrew_Robertson@compuserve.com>
+  
+  Alerted me to my terrible abuse of my native language in the tips
+  screen.
+
+o Jim Aspnes <aspnes@cs.yale.edu>
+
+  Submitted a patch to allow countdown timers with alarms. This patch
+  formed the basis of the countdown ability of v1.02. Also gave lots
+  of support and ideas when I was getting stuck with bits and bobs.
+
+o Iain Barclay <isb@pobox.com>
+
+  Help and ideas and was good enough to read and reply to my mail
+  while I was attempting to get my head around various bits of Pilot
+  coding. He also runs the excellent RoadCoders web site (check it
+  out at http://www.roadcoders.com/) and is the author of the (IMHO) 
+  #1 timer application, BugMe!
+
+o J. Y. Mantinband <yosh@netvision.net>
+
+  Thanks for sticking with 1.05 and testing each release above and
+  beyound the call of duty.
+
+o Andrew Ball <aball@icis.on.ca>
+
+  For helping me work out if the menu-death-bug was a problem with the
+  compiler and for patching TikTok to work with 0.5.0. Andy is also
+  the author of the excellent Chronos, if you want a serious stopwatch,
+  clock and countdown timer you should check out Chronos.
+
+o Holger Klawitter <holger@math.uni-muenster.de>
+
+  For the clock display suggestion.
+
+o Kadar Tanuwidjaja <ktan8@dgs.monash.edu.au>
+
+  For a patch that added the "timer memory" and "halting alarms"
+  features.
+

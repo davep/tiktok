@@ -1,0 +1,47 @@
+Welcome to TikTok.
+
+TikTok is designed to be a simple, no nonsense, timer utility. Using
+it is dead simple. Tick on a tickbox to start a timer, edit it's
+description to tell you what it is you are timing. Simple! There are a
+couple of other features, tap on the (I) icon for full help.
+
+The application ID 'DAP2' is registered with USR. If you intend to
+make changes and release your own free version based on this code
+please make sure you change the application ID.
+
+Please note that I'm releasing TikTok as free software, licensed under
+the GPL. Be sure to read the file COPYING for full details.
+
+If you have any feedback or comments (or bugs) please feel free to
+mail them to tiktok@hagbard.demon.co.uk (please use this address
+instead of my personal address as this helps me in sorting my mail and
+it will result in you getting a better response). Before you do mail
+me with any questions and/or bugs, please read the FAQ file first,
+your question may already have been answered.
+
+Also, if you would like to join in on discussions about TikTok with
+other TikTok users you may want to join the tiktok-users mailing
+list. To join the list send a message to:
+
+	majordomo@hagbard.demon.co.uk
+
+and in the body of the message (NOTE, that's the body of the message,
+NOT the subject) type:
+
+	subscribe tiktok-users
+
+The list gets pretty much 0 traffic, but I do use it to announce new
+versions and the like. So, don't worry, it won't flood your mailbox.
+
+The latest version of TikTok will always be available from:
+
+        http://www.acemake.com/hagbard/
+or
+        http://www.hagbard.demon.co.uk/
+
+If you are upgrading from an earlier version of TikTok you can find
+out what has changed by reading the Changes file.
+
+Have fun.
+Dave Pearson <davep@hagbard.demon.co.uk>
+(TikTok feedback to tiktok@hagbard.demon.co.uk please)

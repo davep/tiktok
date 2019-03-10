@@ -1,0 +1,78 @@
+Changes in v1.07
+================
+
+o Fixed a bug in RaiseAlarm() that caused a FE if the timer that was
+  kicking in had an empty description.
+
+o You can now tell TikTok that you want timers to stop counting when
+  they are acting as an alarm and they go off. See the options dialog
+  for the setting (thanks to Kadar Tanuwidjaja <ktan8@dgs.monash.edu.au>
+  for the patch that this change is based on).
+
+o You can now tell TikTok to use a timers last starting time when you
+  tick it on a second time. See the options dialog for the setting
+  (thanks to Kadar Tanuwidjaja <ktan8@dgs.monash.edu.au> for the patch
+  that this change is based on).
+
+Changes in v1.06
+================
+
+o Minor tweaks to the prefs structures to reduce the memory needed to
+  hold the timer details.
+
+o Improved the look of the interface (thanks to J. Y. Mantinband
+  <yosh@netvision.net> for the suggestions).
+
+o Added "zero timer" options to the Clear menu.
+
+o Added a "quick alarms" menu.
+
+o Added an extra config option that lets you tell TikTok that you
+  don't want to be asked silly questions when you say you want to
+  clear/zero all timers.
+
+o Added an optional clock display (thanks to Holger Klawitter
+  <holger@math.uni-muenster.de> for the suggestion).
+
+Changes in v1.05
+================
+
+o PilotMain() now returns sysErrParamErr if the cmd is not known or used
+  by TikTok (source: <syK3zYbo8GA.74@darrin2.massena.com> in
+  pilot.programmer.gcc on news.massena.com).
+
+o Many tweaks to the code to try and kill the menu-death-bug.
+
+o Moved to GCC 0.5.0. It appears that 0.4.0 was the cause of the
+  menu-death-bug.
+
+Changes in v1.04
+================
+
+o Removed the input filter on the time fields. Next time I'll think
+  things thru a lot better before I add something like this. :-)
+
+Changes in v1.03
+================
+
+o Corrected a couple of minor bugs which shouldn't have been user
+  visible but were bad coding.
+
+o When writing in the "time" field, all characters that are not
+  "0-9:." are ignored.
+
+Changes in v1.02
+================
+
+o Corrected a couple of spelling mistakes.
+
+o All time fields are now editable.
+
+o If a user enters a negative value in a time field it is considered to
+  be a countdown timer and will trip an alarm when it hits 0.
+
+o Added options form that allows you to specify if alarms should just
+  be audible or visible as well.
+
+o You can now use the Pilot's up/down keys to start and stop a timer 
+  (both keys work the same, they toggle the currently focused timer).

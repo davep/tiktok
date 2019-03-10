@@ -1,0 +1,41 @@
+TikTok FAQ:
+
+1. Is there any chance of adding feature X?
+
+   Possibly. Mail me with your suggestion and I'll consider it. I can't
+   guarantee that I'll add it, but, if I like it, if it can be done and
+   if I can do it and it makes sense for TikTok I'll probably add it.
+
+   Failing that, you have the source code.... :-)
+
+2. Can I register TikTok?
+
+   No, TikTok is free software, read the file COPYING for full details.
+   However, if you do feel the need to send someone some money why not
+   consider making a donation to the Free Software Foundation? Pop over
+   to http://www.fsf.org/ to find out about them.
+
+3. Can I modify and distribute my own version of TikTok?
+
+   Read the file COPYING for a full answer to this question.
+
+4. Alarms appear to kick in up to 60 seconds late!
+
+   This is a known "problem" with the Pilot. If your Pilot is turned
+   on an alarm should fire right on time. However, if your Pilot is
+   turned off an alarm can kick in up to 60 seconds late. From what
+   I've seen most software that uses alarms suffers from this. I'm
+   afraid there is nothing I can do about this, it appears to be the
+   way the Pilot works.
+
+5. Why can't I time things down to 100th of a second?
+
+   Because TikTok is not designed to do that. It's designed to be
+   a simple, pretty accurate, stopwatch utility. I'd not advise that
+   you time any critical event. I wrote TikTok to time things where
+   a couple of seconds here and there don't matter (that's not to say
+   that TikTok is that sloppy).
+   
+   If you want a stopwatch that can go down to 100th of a second I'd
+   suggest you take a look at Chronos (check your local Pilot software
+   library for full details).

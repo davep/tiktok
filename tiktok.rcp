@@ -1,0 +1,208 @@
+#include "tiktok.h"
+
+MENU ID ID_MnuTikTok
+BEGIN
+
+   PULLDOWN "Clear"
+   BEGIN
+      MENUITEM "Clear Focused\t" ID_MnuClearFocused "F"
+      MENUITEM "Clear Stopped\t" ID_MnuClearStopped "T"
+      MENUITEM "Clear All\t"     ID_MnuClearAll     "A"
+      MENUITEM "-"               ID_MnuClearSep0
+      MENUITEM "Zero Focused\t"  ID_MnuZeroFocused  "Z"
+      MENUITEM "Zero Stopped"    ID_MnuZeroStopped
+      MENUITEM "Zero All"        ID_MnuZeroAll
+   END
+
+   PULLDOWN "Alarm"
+   BEGIN
+      MENUITEM "1  Minute\t"  ID_MnuAlarm1Min  "1"
+      MENUITEM "2  Minutes\t" ID_MnuAlarm2Min  "2"
+      MENUITEM "3  Minutes\t" ID_MnuAlarm3Min  "3"
+      MENUITEM "4  Minutes\t" ID_MnuAlarm4Min  "4"
+      MENUITEM "5  Minutes\t" ID_MnuAlarm5Min  "5"
+      MENUITEM "30 Minutes"   ID_MnuAlarm30Min
+      MENUITEM "1  Hour"      ID_MnuAlarm1Hr
+      MENUITEM "2  Hours"     ID_MnuAlarm2Hr
+      MENUITEM "3  Hours"     ID_MnuAlarm3Hr
+      MENUITEM "4  Hours"     ID_MnuAlarm4Hr
+      MENUITEM "5  Hours"     ID_MnuAlarm5Hr
+      MENUITEM "1  Day"       ID_MnuAlarm1Day
+      MENUITEM "2  Days"      ID_MnuAlarm2Day
+   END
+
+   PULLDOWN "Edit"
+   BEGIN
+      MENUITEM "Undo\t"       ID_MnuEditUndo      "U"
+      MENUITEM "Cut\t"        ID_MnuEditCut       "X"
+      MENUITEM "Copy\t"       ID_MnuEditCopy      "C"
+      MENUITEM "Paste\t"      ID_MnuEditPaste     "P"
+      MENUITEM "Select All\t" ID_MnuEditSelectAll "S"
+      MENUITEM "-"            ID_MnuEditSep0
+      MENUITEM "Keyboard\t"   ID_MnuEditKeyboard  "K"
+   END
+
+   PULLDOWN "Options"
+   BEGIN
+      MENUITEM "Preferences"  ID_MnuOptionsPrefs
+   END
+
+END
+
+FORM ID_FrmTikTok 0 0 160 161
+SAVEBEHIND
+USABLE
+MODAL
+MENUID ID_MnuTikTok
+HELPID ID_HlpTikTok
+BEGIN
+
+   TITLE "TikTok v1.07"
+
+   FIELD ID ID_ClkHour AT ( 90            16 20 20 ) MAXCHARS 3 USABLE RIGHTALIGN SINGLELINE NONEDITABLE FONT 6
+   FIELD ID ID_ClkMin  AT ( PrevRight + 2 16 20 20 ) MAXCHARS 3 USABLE RIGHTALIGN SINGLELINE NONEDITABLE FONT 6
+   FIELD ID ID_ClkSec  AT ( PrevRight + 2 13 10 20 ) MAXCHARS 3 USABLE RIGHTALIGN SINGLELINE NONEDITABLE
+   FIELD ID ID_ClkAmPm AT ( PrevLeft      24 15 20 ) MAXCHARS 3 USABLE            SINGLELINE NONEDITABLE
+
+   CHECKBOX "" ID ID_ChkFirst     AT ( 0 40 12 10 )
+   CHECKBOX "" ID ID_ChkFirst + 1 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_ChkFirst + 2 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_ChkFirst + 3 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_ChkFirst + 4 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_ChkFirst + 5 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_ChkFirst + 6 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_ChkFirst + 7 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_ChkFirst + 8 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_ChkFirst + 9 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+
+   CHECKBOX "" ID ID_StkFirst     AT ( PrevRight + 1 40 12 10 )
+   CHECKBOX "" ID ID_StkFirst + 1 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_StkFirst + 2 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_StkFirst + 3 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_StkFirst + 4 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_StkFirst + 5 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_StkFirst + 6 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_StkFirst + 7 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_StkFirst + 8 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+   CHECKBOX "" ID ID_StkFirst + 9 AT ( PrevLeft PrevTop + 12 PrevWidth PrevHeight )
+
+   FIELD ID_TxtFirst + 0 PrevRight + 1 40 80             AUTO UNDERLINED MAXCHARS 20
+   FIELD ID_TxtFirst + 1 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED MAXCHARS 20
+   FIELD ID_TxtFirst + 2 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED MAXCHARS 20
+   FIELD ID_TxtFirst + 3 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED MAXCHARS 20
+   FIELD ID_TxtFirst + 4 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED MAXCHARS 20
+   FIELD ID_TxtFirst + 5 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED MAXCHARS 20
+   FIELD ID_TxtFirst + 6 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED MAXCHARS 20
+   FIELD ID_TxtFirst + 7 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED MAXCHARS 20
+   FIELD ID_TxtFirst + 8 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED MAXCHARS 20
+   FIELD ID_TxtFirst + 9 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED MAXCHARS 20
+
+   FIELD ID_SecFirst + 0 PrevRight + 1 40 50             AUTO UNDERLINED RIGHTALIGN MAXCHARS 12
+   FIELD ID_SecFirst + 1 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED RIGHTALIGN MAXCHARS 12
+   FIELD ID_SecFirst + 2 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED RIGHTALIGN MAXCHARS 12
+   FIELD ID_SecFirst + 3 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED RIGHTALIGN MAXCHARS 12
+   FIELD ID_SecFirst + 4 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED RIGHTALIGN MAXCHARS 12
+   FIELD ID_SecFirst + 5 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED RIGHTALIGN MAXCHARS 12
+   FIELD ID_SecFirst + 6 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED RIGHTALIGN MAXCHARS 12
+   FIELD ID_SecFirst + 7 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED RIGHTALIGN MAXCHARS 12
+   FIELD ID_SecFirst + 8 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED RIGHTALIGN MAXCHARS 12
+   FIELD ID_SecFirst + 9 PrevLeft PrevTop + 12 PrevWidth AUTO UNDERLINED RIGHTALIGN MAXCHARS 12
+
+   LABEL "Start/Stop" ID_LabStartStop 30 15
+   LABEL "Persistent" ID_LabPersist   30 25
+
+   GRAFFITISTATEINDICATOR AT ( 150 15 )
+
+END
+
+FORM ID_FrmOptions 25 40 110 95
+SAVEBEHIND
+USABLE
+MODAL
+BEGIN
+
+   TITLE "TikTok Options"
+
+   CHECKBOX "Visual Alarms"       ID ID_ChkVisAlm   AT ( 8 20 110 10 )
+   CHECKBOX "Ask Silly Questions" ID ID_ChkSilly    AT ( 8 30 110 10 )
+   CHECKBOX "Show Time"           ID ID_ChkShowTime AT ( 8 40 110 10 )
+   CHECKBOX "Start time memory"   ID ID_ChkMemory   AT ( 8 50 110 10 )
+   CHECKBOX "Stop timer on alarm" ID ID_ChkAlmStp   AT ( 8 60 110 10 )
+
+   BUTTON "Ok" ID_BtnOk 10 80 AUTO AUTO
+
+END
+
+STRING ID_HlpTikTok "TIKTOK - SIMPLE MULTI-STOPWATCH FOR THE USR PILOT\n"\
+                    "Copyright (C) 1997-1998\n"\
+                    "David A Pearson\n"\
+                    "\n"\
+                    "This program is free software; you can redistribute it and/or modify "\
+                    "it under the terms of the GNU General Public License as published by "\
+                    "the Free Software Foundation; either version 2 of the license, or "\
+                    "(at your option) any later version.\n"\
+                    "\n"\
+                    "This program is distributed in the hope that it will be useful, "\
+                    "but WITHOUT ANY WARRANTY; without even the implied warranty of "\
+                    "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the "\
+                    "GNU General Public License for more details.\n"\
+                    "\n"\
+                    "You should have received a copy of the GNU General Public License"\
+                    "along with this program; if not, write to the Free Software"\
+                    "Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.\n"\
+                    "\n"\
+                    "TikTok is designed to be a very simple, no frills "\
+                    "stopwatch timer.\n\n"\
+                    "To start a timer check its start/stop checkbox, to stop a timer un-check "\
+                    "its start/stop checkbox.\n\n"\
+                    "A timer can be made to be \"persistent\" by ticking its "\
+                    "\"persistent\" checkbox. In this case \"persistent\" means "\
+                    "that when you stop it, and then re-start it, instead of "\
+                    "starting from 0.00:00:00 it will carry on counting from "\
+                    "the place you left off.\n\n"\
+                    "You can edit the time field of a non-running timer and set "\
+                    "the time value to anything you like. If you set the time to "\
+                    "a negative value the time will count down to 0.00:00:00 and "\
+                    "an alarm will sound when 0 is reached.\n\n"\
+                    "The TikTok timers will carry on working when others apps are "\
+                    "running and when your Pilot is turned off.\n\n"\
+                    "tiktok@hagbard.demon.co.uk\nwww.acemake.com/hagbard\n"\
+                    "www.hagbard.demon.co.uk"
+
+ALERT ID_AltClearAll CONFIRMATION
+BEGIN
+   TITLE "Clear all timers?"
+   MESSAGE "Are you sure?"
+   BUTTONS "Yes" "No"
+END
+
+ALERT ID_AltZeroAll CONFIRMATION
+BEGIN
+   TITLE "Zero all timers?"
+   MESSAGE "Are you sure?"
+   BUTTONS "Yes" "No"
+END
+
+ALERT ID_AltNoSelect INFORMATION
+BEGIN
+   TITLE "Select Timer"
+   MESSAGE "You must have a timer selected to perform this command. "\
+           "To select a timer tap its notes field."
+   BUTTONS "Ok"
+END
+
+ALERT ID_AltParseErr ERROR
+BEGIN
+   TITLE "Time Error"
+   MESSAGE "The time you entered does not make sense. Please edit "\
+           "and try again."
+   BUTTONS "Ok"
+END
+
+ALERT ID_AltAlarm INFORMATION
+BEGIN
+   TITLE "TikTok Alarm"
+   MESSAGE "The TikTok countdown timer\n\n\"^1\"\n\n"\
+           "has now expired."
+   BUTTONS "Ok"
+END
